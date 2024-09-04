@@ -33,25 +33,24 @@ const sign = getValidDirection();
 function fizzBuzz(n1, n2, sign) {
   if (sign === "+") {
     for (let i = n1; i <= n2; i++) {
-      if (i % 15 === 0) {
-        console.log("fizzbuzz");
-      } else if (i % 5 === 0) {
-        console.log("buzz");
-      } else if (i % 3 === 0) {
-        console.log("fizz");
-      } else console.log(i);
+      checkfizzBuzz(i);
     }
   } else {
     for (let i = n2; i >= n1; i--) {
-      if (i % 15 === 0) {
-        console.log("fizzbuzz");
-      } else if (i % 5 === 0) {
-        console.log("buzz");
-      } else if (i % 3 === 0) {
-        console.log("fizz");
-      } else console.log(i);
+      checkfizzBuzz(i);
     }
   }
 }
 
+function checkfizzBuzz(num) {
+  if (num % 15 === 0) {
+    console.log("fizzbuzz");
+  } else if (num % 5 === 0) {
+    console.log("buzz");
+  } else if (num % 3 === 0) {
+    console.log("fizz");
+  } else {
+    console.log(num);
+  }
+}
 fizzBuzz(num1, num2, sign);
